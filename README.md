@@ -23,7 +23,7 @@ repo_root/
 ├── sw/                         # co-simulation C/C++ firmware, drivers, memory hex generators
 ├── scripts/                    # global automation, CI runners, linter rules, Python tools
 └── build/                      # EDA tool output, logs, bitstreams, sim binaries```
-
+```
 ## Coding Style
 ### Naming conventions
 - signals and variables name in `snake_case`
