@@ -3,25 +3,26 @@ This repository holds the code written, imported, and integrated by UW Reality L
 
 ## Directory structure
 ```
-project/
-├── constraints/    # Physical and timing constraints
-├── data/           # Synthesizable data (e.g. BRAM memory initialization)
-├── datasheets/     # Datasheets for boards, ICs, and peripherals
-├── examples/       # Open-source or vendor example modules
-├── ip/             # Third-party or pre-packaged IP cores
-│   ├── module/       # ├── group IPs into corresponding directories
-├── scripts/        # Utility and automation scripts
-├── sim/            # Simulation-specific files (scripts, waveforms, etc.)
-├── src/            # Source RTL files
-│   ├── comm          # ├── Communication protocol and modules
-│   ├── core          # ├── Core application logic and datapaths
-│   ├── include       # ├── Header files
-│   ├── mem           # ├── Memory interfaces and controllers
-│   ├── top           # ├── Top-level design files
-│   ├── utils         # ├── Small, generic, reusable modules
-├── syn/              # synthesis-related files and scripts
-├── tb/             # Testbenches and verification files
-```
+repo_root/
+├── docs/                       # crchitecture specs, memory maps, and datasheets
+│   ├── datasheets/             # datasheets
+│   
+├── hw/                         
+│   ├── ip/                     # efinix/third-party IPs
+│   └── top/                    
+│       ├── main/               # primary active project - probably contributes
+│       │   ├── rtl/            # top-level wrapper (top.sv), clock/reset gen
+│       │   ├── constraints/    # pinout and timing constraints (.xdc, .sdc, .isf)
+│       │   ├── tb/             # system-level integration testbenches
+│       │   └── syn/            # project generation scripts (Tcl, XML project files)
+│       └── example_module/     # set-aside designs & onboarding sandboxes
+│           ├── rtl/
+│           ├── constraints/
+│           ├── tb/
+│           └── syn/
+├── sw/                         # co-simulation C/C++ firmware, drivers, memory hex generators
+├── scripts/                    # global automation, CI runners, linter rules, Python tools
+└── build/                      # EDA tool output, logs, bitstreams, sim binaries```
 
 ## Coding Style
 ### Naming conventions
