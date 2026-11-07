@@ -1,7 +1,5 @@
-# VITracker
-This repository holds the code written, imported, and integrated by UW Reality Lab's VITracker subteam. This includes all RTL, embedded/firmware, software, and testing infrastructure.
-
-## Setup and running synthesis
+# Standalone Ti60 Gateware
+This repository holds the code written, imported, and integrated by UW Reality Lab's standalone-hardware gateware. This includes all RTL, embedded/firmware, software, and testing infrastructure.
 
 ## Directory structure
 ```
